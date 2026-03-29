@@ -10,6 +10,10 @@ RUN npm install --include=dev
 
 COPY . .
 
+RUN npm install -g @angular/cli
+
+RUN npm run build --prod
+
 EXPOSE 8502
 
 CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--port", "8502"]
