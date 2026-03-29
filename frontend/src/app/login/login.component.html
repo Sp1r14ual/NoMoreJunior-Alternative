@@ -1,0 +1,28 @@
+<div class="login-page">
+  <div class="login-card">
+    <h1>Авторизация</h1>
+    <p class="login-subtitle">Войдите, чтобы открыть приложение</p>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="field">
+        <label for="username">Логин</label>
+        <input id="username" type="text" formControlName="username" />
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" formControlName="password" />
+      </div>
+
+      @if (error()) {
+        <div class="error">{{ error() }}</div>
+      }
+
+      <button class="btn" type="submit">Войти</button>
+    </form>
+
+    <div class="hint">
+      Тестовый вход: <b>admin</b> / <b>123456</b>
+    </div>
+  </div>
+</div>

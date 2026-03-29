@@ -1,0 +1,68 @@
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 10px;
+}
+
+.tasks-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 140px 100px;
+  padding: 10px 15px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 1fr 140px 100px;
+  padding: 16px 15px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.task-title {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+/* Стили для разных статусов */
+.status-badge[data-status="Done"] { background: #dcfce7; color: #15803d; }
+.status-badge[data-status="In Progress"] { background: #fef9c3; color: #a16207; }
+.status-badge[data-status="To Do"] { background: #f1f5f9; color: #475569; }
+
+.priority-text {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}

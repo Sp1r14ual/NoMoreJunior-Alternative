@@ -1,0 +1,116 @@
+.workpanel {
+  padding: 18px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  color: #64748b;
+}
+
+.tests-section + .tests-section {
+  margin-top: 28px;
+}
+
+.tests-section h3 {
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.test-row {
+  display: grid;
+  grid-template-columns: 2fr 160px 110px 120px;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.test-main h4 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #0f172a;
+}
+
+.test-main p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.test-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.test-status {
+  justify-self: start;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.test-status.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.test-status.passed {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.test-action {
+  justify-self: end;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+@media (max-width: 900px) {
+  .test-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .test-action {
+    justify-self: start;
+  }
+}

@@ -1,0 +1,248 @@
+:host {
+  display: block;
+  background: #f1f5f9;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.workpanel {
+  padding: 24px;
+}
+
+/* --- Сетка: 50/50 для верхних блоков --- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* --- Универсальный стиль белых карточек --- */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cardAppear 0.6s ease-out forwards;
+  animation-delay: 0.15s;
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+@keyframes cardAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Список тестов --- */
+.tests-list {
+  display: grid;
+  gap: 12px;
+}
+
+.test-row {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  border-left: 8px solid #cbd5e1;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.test-row:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+.test-row.diff-easy {
+  border-left-color: #22c55e;
+}
+
+.test-row.diff-medium {
+  border-left-color: #f59e0b;
+}
+
+.test-row.diff-hard {
+  border-left-color: #ef4444;
+}
+
+.test-info {
+  font-weight: 600;
+  color: #334155;
+  font-size: 15px;
+}
+
+.test-info small {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.test-time {
+  color: #64748b;
+  font-size: 14px;
+  min-width: 60px;
+  text-align: right;
+}
+
+.test-score {
+  font-weight: 800;
+  color: #0f172a;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* --- Круговой график --- */
+.score-ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+}
+
+.ring {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 12;
+}
+
+.ring-value {
+  fill: none;
+  stroke: #1e293b;
+  stroke-width: 12;
+  stroke-linecap: butt;
+
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+
+  transition: none;
+}
+
+.ring-value.animate {
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ring-percent {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.ring-label {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* --- Skills --- */
+.skills-card {
+  margin-top: 24px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #334155;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.skill-bar {
+  height: 12px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #1e293b;
+  transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skills-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* --- Кнопки --- */
+.btn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+/* Старые классы */
+.Font {
+  display: none;
+}
+
+.top-section {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

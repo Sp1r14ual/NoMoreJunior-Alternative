@@ -1,0 +1,54 @@
+<section class="workpanel">
+  <div class="card">
+    <h2>Tests</h2>
+    <p class="subtitle">Список доступных и пройденных тестов.</p>
+
+    <div class="tests-section">
+      <h3>Доступные тесты</h3>
+
+      <div class="tests-list">
+        <div class="test-row" *ngFor="let test of availableTests">
+          <div class="test-main">
+            <h4>{{ test.title }}</h4>
+            <p>{{ test.description }}</p>
+          </div>
+
+          <div class="test-meta">
+            <span>{{ test.time }}</span>
+            <span>{{ test.questions }} вопросов</span>
+          </div>
+
+          <div class="test-status available">Доступен</div>
+
+          <div class="test-action">
+            <button class="btn-primary">Начать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tests-section">
+      <h3>Пройденные тесты</h3>
+
+      <div class="tests-list">
+        <div class="test-row" *ngFor="let test of passedTests">
+          <div class="test-main">
+            <h4>{{ test.title }}</h4>
+            <p>{{ test.description }}</p>
+          </div>
+
+          <div class="test-meta">
+            <span>{{ test.score }}</span>
+            <span>{{ test.passedAt }}</span>
+          </div>
+
+          <div class="test-status passed">Пройден</div>
+
+          <div class="test-action">
+            <button class="btn-secondary">Результат</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

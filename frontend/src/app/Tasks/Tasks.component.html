@@ -1,0 +1,26 @@
+<section class="workpanel">
+  <div class="card">
+    <div class="tasks-header">
+      <h2 class="Font">Project Tasks</h2>
+      <button class="btn">+ New Task</button>
+    </div>
+
+    <div class="tasks-table">
+      <div class="table-header">
+        <span class="col-title">Task Name</span>
+        <span class="col-status">Status</span>
+        <span class="col-priority">Priority</span>
+      </div>
+
+      @for (task of tasks(); track task.id) {
+        <div class="task-item" (click)="toggleStatus(task.id)">
+          <span class="task-title">{{ task.title }}</span>
+          <span class="status-badge" [attr.data-status]="task.status">
+            {{ task.status }}
+          </span>
+          <span class="priority-text">{{ task.priority }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

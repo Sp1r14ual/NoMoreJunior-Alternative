@@ -1,0 +1,67 @@
+<div class="workpanel">
+  <div class="grid">
+    <div class="card">
+      <h2>Test</h2>
+      <div class="tests-list">
+        <div class="test-row diff-easy">
+          <span class="test-info">AngularCounter <small>Angular</small></span>
+          <span class="test-time">36 min</span>
+          <span class="test-score">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Total score</h2>
+      <div class="score-ring">
+        <svg class="ring" viewBox="0 0 120 120">
+          <circle
+            class="ring-bg"
+            cx="60"
+            cy="60"
+            r="52"
+            stroke-linecap="butt">
+          </circle>
+
+          <circle
+            class="ring-value"
+            [class.animate]="animateCircle()"
+            cx="60"
+            cy="60"
+            r="52"
+            pathLength="100"
+            stroke-dasharray="100"
+            stroke-linecap="butt"
+            [style.stroke-dashoffset]="dashoffset()">
+          </circle>
+        </svg>
+
+        <div class="ring-text">
+          <span class="ring-percent">{{ score() }}%</span>
+          <span class="ring-label">{{ points() }} out of {{ maxPoints() }} points</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card skills-card">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      @for (skill of skills() | keyvalue; track skill.key) {
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">{{ skill.key }}</span>
+            <span class="skill-val">{{ skill.value }}%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" [style.width.%]="skill.value"></div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="skills-actions">
+      <button class="btn" (click)="randomizeSkills()">Update skills</button>
+    </div>
+  </div>
+</div>
