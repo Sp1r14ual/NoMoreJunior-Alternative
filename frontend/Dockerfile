@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8502
+EXPOSE 4200
 
-CMD ["npx", "ng", "serve"]
+CMD ["npm", "start"]
