@@ -5,7 +5,7 @@ services:
     build: ./frontend
     container_name: frontend_alt
     ports:
-      - "8502:8502"
+      - "4200:4200"
     volumes:
       - ./frontend:/app
     restart: always
