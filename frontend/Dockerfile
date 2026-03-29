@@ -2,8 +2,10 @@ FROM node:24.14.1-alpine
 
 WORKDIR /app
 
-# copy app files
+RUN npm install
+
 COPY . .
 
 EXPOSE 8502
+
 CMD ["npx", "ng", "serve"]
