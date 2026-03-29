@@ -11,7 +11,7 @@ RUN npm ci
 COPY . .
 
 RUN npm install -g @angular/cli
-RUN node_modules/.bin/ng build --prod
+RUN node_modules/.bin/ng build
 # RUN npm run build --prod
 
 EXPOSE 8502
