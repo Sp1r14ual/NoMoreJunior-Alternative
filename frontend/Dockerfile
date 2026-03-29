@@ -6,12 +6,11 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package*.json ./
 
-RUN npm install --include=dev
+RUN npm ci --only=production
 
 COPY . .
 
 RUN npm install -g @angular/cli
-
 RUN npm run build --prod
 
 EXPOSE 8502
