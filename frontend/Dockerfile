@@ -6,11 +6,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --dev
-RUN node_modules/.bin/ng build --prod
+RUN npm install --include=dev
 
 COPY . .
 
-EXPOSE 4200
+EXPOSE 8502
 
-CMD ["npm", "start"]
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--port", "8502"]
