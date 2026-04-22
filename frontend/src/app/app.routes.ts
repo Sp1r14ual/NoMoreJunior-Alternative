@@ -7,17 +7,17 @@ export const routes: Routes = [
   {
     path: '',
     component: MyProfileComponent,
-    data: { title: 'Joan Smith', breadcrumb: 'My Profile' }
+    data: { title: 'Joan Smith', breadcrumb: 'Мой профиль' }
   },
   {
     path: 'tests',
     component: TestsListComponent,
-    data: { title: 'Tests', breadcrumb: 'Tests > Junior Frontend' }
+    data: { title: 'Тесты', breadcrumb: 'Тесты > Junior Frontend' }
   },
   {
     path: 'tasks',
     component: TasksComponent,
-    data: { title: 'Project Tasks', breadcrumb: 'Tasks > Board' }
+    data: { title: 'Проектная деятельность', breadcrumb: 'Задания > Доска с заданиями' }
   },
   {
     path: '**',

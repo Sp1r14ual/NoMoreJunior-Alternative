@@ -20,19 +20,19 @@ interface TestItem {
 export class TestsListComponent {
   availableTests: TestItem[] = [
     {
-      title: 'HTML Basics',
+      title: 'Основы HTML',
       description: 'Основы HTML: структура страницы, теги, формы.',
       time: '15 мин',
       questions: 12
     },
     {
-      title: 'CSS Fundamentals',
+      title: 'Основы CSS',
       description: 'Селекторы, box model, flexbox, позиционирование.',
       time: '20 мин',
       questions: 15
     },
     {
-      title: 'JavaScript Starter',
+      title: 'Основы JavaScript',
       description: 'Переменные, функции, условия, массивы.',
       time: '25 мин',
       questions: 18
@@ -41,7 +41,7 @@ export class TestsListComponent {
 
   passedTests: TestItem[] = [
     {
-      title: 'Angular Intro',
+      title: 'Введение в Angular',
       description: 'Базовые понятия Angular и структура приложения.',
       time: '18 мин',
       questions: 10,
@@ -49,7 +49,7 @@ export class TestsListComponent {
       passedAt: '20.03.2026'
     },
     {
-      title: 'TypeScript Basics',
+      title: 'Основы TypeScript',
       description: 'Типы, интерфейсы, классы и работа с данными.',
       time: '17 мин',
       questions: 10,

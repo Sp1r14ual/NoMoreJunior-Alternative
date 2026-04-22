@@ -1,18 +1,18 @@
 <div class="workpanel">
   <div class="grid">
     <div class="card">
-      <h2>Test</h2>
+      <h2>Тесты</h2>
       <div class="tests-list">
         <div class="test-row diff-easy">
-          <span class="test-info">AngularCounter <small>Angular</small></span>
-          <span class="test-time">36 min</span>
+          <span class="test-info">Счётчик на Angular <small>Angular</small></span>
+          <span class="test-time">36 мин</span>
           <span class="test-score">100%</span>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <h2>Total score</h2>
+      <h2>Общий результат</h2>
       <div class="score-ring">
         <svg class="ring" viewBox="0 0 120 120">
           <circle
@@ -38,14 +38,14 @@
 
         <div class="ring-text">
           <span class="ring-percent">{{ score() }}%</span>
-          <span class="ring-label">{{ points() }} out of {{ maxPoints() }} points</span>
+          <span class="ring-label">{{ points() }} из {{ maxPoints() }} баллов</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="card skills-card">
-    <h2>Skills</h2>
+    <h2>Навыки</h2>
     <div class="skills-list">
       @for (skill of skills() | keyvalue; track skill.key) {
         <div class="skill-item">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="skills-actions">
-      <button class="btn" (click)="randomizeSkills()">Update skills</button>
+      <button class="btn" (click)="randomizeSkills()">Практиковаться</button>
     </div>
   </div>
 </div>

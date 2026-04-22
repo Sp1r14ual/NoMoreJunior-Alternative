@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class TasksComponent {
   // Используем Signal для управления списком задач
   tasks = signal([
-    { id: 1, title: 'Fix circular chart bug', status: 'In Progress', priority: 'High' },
-    { id: 2, title: 'Add breadcrumbs to app.html', status: 'Done', priority: 'Medium' },
-    { id: 3, title: 'Refactor folder structure', status: 'To Do', priority: 'Low' },
-    { id: 4, title: 'Create Tasks component', status: 'Done', priority: 'High' }
+    { id: 1, title: 'Исправить ошибку с круговой диаграммой', status: 'В процессе', priority: 'Высокий' },
+    { id: 2, title: 'Добавить подразделы в app.html', status: 'Готово', priority: 'Средний' },
+    { id: 3, title: 'Отрефакторить структуру проекта', status: 'Ожидает', priority: 'Низкий' },
+    { id: 4, title: 'Создать компонент с задачами', status: 'Готово', priority: 'Высокий' }
   ]);
 
   // Метод для переключения статуса (простая работоспособность)
@@ -22,7 +22,7 @@ export class TasksComponent {
     this.tasks.update(currentTasks => 
       currentTasks.map(task => 
         task.id === id 
-          ? { ...task, status: task.status === 'Done' ? 'To Do' : 'Done' } 
+          ? { ...task, status: task.status === 'Готово' ? 'Ожидает' : 'Готово' } 
           : task
       )
     );

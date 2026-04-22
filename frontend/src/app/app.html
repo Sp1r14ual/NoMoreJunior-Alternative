@@ -1,20 +1,20 @@
 <div class="app-shell">
   <div class="layout" [class.auth-locked]="!authService.isAuthenticated()">
     <aside class="sidebar">
-      <div class="brand">Code Path</div>
+      <div class="brand">NoMoreJunior</div>
 
       <nav class="menu">
-        <a class="item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">My Profile</a>
-        <a class="item" routerLink="/tests" routerLinkActive="active">Tests</a>
-        <a class="item" routerLink="/tasks" routerLinkActive="active">Tasks</a>
+        <a class="item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Мой профиль</a>
+        <a class="item" routerLink="/tests" routerLinkActive="active">Тесты</a>
+        <a class="item" routerLink="/tasks" routerLinkActive="active">Задания</a>
       </nav>
 
       <div class="sidebar-bottom">
-        <a class="item" href="https://vk.com/id462903977" target="_blank">Contact support</a>
-        <a class="item" href="#">Your account</a>
+        <a class="item" href="https://vk.com/id462903977" target="_blank">Поддержка</a>
+        <a class="item" href="#">Мой аккаунт</a>
 
         @if (authService.isAuthenticated()) {
-          <button class="item logout-item" type="button" (click)="logout()">Logout</button>
+          <button class="item logout-item" type="button" (click)="logout()">Выход</button>
         }
       </div>
     </aside>
@@ -22,7 +22,7 @@
     <main class="content">
       <header class="topbar">
         <nav class="crumbs" aria-label="Breadcrumb">
-          <a routerLink="/">Home</a>
+          <a routerLink="/">Домашняя страница</a>
 
           @if (breadcrumb()) {
             <span class="current">{{ breadcrumb() }}</span>

@@ -1,15 +1,15 @@
 <section class="workpanel">
   <div class="card">
     <div class="tasks-header">
-      <h2 class="Font">Project Tasks</h2>
-      <button class="btn">+ New Task</button>
+      <h2 class="Font">Проектные задания</h2>
+      <button class="btn">Добавить новое</button>
     </div>
 
     <div class="tasks-table">
       <div class="table-header">
-        <span class="col-title">Task Name</span>
-        <span class="col-status">Status</span>
-        <span class="col-priority">Priority</span>
+        <span class="col-title">Название</span>
+        <span class="col-status">Статус</span>
+        <span class="col-priority">Приоритет</span>
       </div>
 
       @for (task of tasks(); track task.id) {
